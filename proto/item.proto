@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package item;
+option go_package = "proto/generated";
+
+service ItemService {
+    rpc CreateItem (CreateRequest) returns (Item) {}
+    rpc ReadItem (ReadRequest) returns (Item) {}
+    rpc UpdateItem (UpdateRequest) returns (Item) {}
+    rpc DeleteItem (DeleteRequest) returns (Empty) {}
+    rpc ListItems (Empty) returns (ItemList) {}
+}
+
+message Item {
+    string id = 1;
+    string name = 2;
+}
+
+message CreateRequest {
+    string id = 1;
+    string name = 2;
+}
+
+message ReadRequest {
+    string id = 1;
+}
+
+message UpdateRequest {
+    string id = 1;
+    string name = 2;
+}
+
+message DeleteRequest {
+    string id = 1;
+}
+
+message ItemList {
+    repeated Item items = 1;
+}
+
+message Empty {}
