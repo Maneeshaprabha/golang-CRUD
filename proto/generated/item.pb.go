@@ -662,7 +662,7 @@ func file_proto_user_proto_init() {
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_user_proto_rawDesc), len(file_proto_user_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   11,
-		
+			NumExtensions: 0,
 			NumServices:   1,
 		},
 		GoTypes:           file_proto_user_proto_goTypes,
